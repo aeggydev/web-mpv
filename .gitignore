@@ -1,0 +1,6 @@
+/web-mpv-extension/node_modules/
+/web-mpv-extension/tsconfig.tsbuildinfo
+/web-mpv-extension/package-lock.json
+/web-mpv-extension/*.js
+/web-mpv-extension/*.map
+.idea
