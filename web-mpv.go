@@ -5,6 +5,7 @@ import (
 	"log"
 	"math/rand"
 	"net/url"
+	"time"
 	"web-mpv/players"
 )
 
@@ -20,6 +21,8 @@ func IsUrlValid(s string) bool {
 }
 
 func main() {
+	// TODO: Delete temporary files before exiting
+	rand.Seed(time.Now().UnixNano())
 	socketPath := fmt.Sprintf("/tmp/mpv-socket-%d", rand.Int())
 	logPath := fmt.Sprintf("/tmp/mpv-log-%d", rand.Int())
 	clientCh := make(chan *players.MpvClient)
